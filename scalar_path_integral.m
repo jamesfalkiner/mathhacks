@@ -1,10 +1,24 @@
 clear variables
 syms x y z r a t
-input1 = input('Input r in cartesian e.g. 2*x - y (set equal to 0)\n');
-diff1= diff(input1,t)
-%diff2=diff(input1(2),t)
-%diff3=diff(input1(3),t)
-mod1 = simplify(sqrt(diff1(1).^2+diff1(2).^2+diff1(3).^2));
-limits1 = input("Input minimum limit (time limits)");
-limits2 = input("Input maximum limit (time limits)");
-answer =  int(mod1,t,limits1,limits2)
+point1 = input('Input 1st point \n');
+point2 = input('Input 2st point \n');
+
+path  = input('Input path in terms of y \n');
+y_value = subs(path,x,t)
+
+vector = [t y_value];
+limits2=point1(1);
+limits1=point2(1);
+pointsx = point2(1)-point1(1)
+pointsy = point2(2)-point1(2)
+
+
+mod1 = sqrt(sym((pointsx.^2+pointsy.^2)))
+
+input1 = input('Input r in cartesian in terms of x and y e.g.)\n');
+thing1 =  subs(input1, x, t)
+disp(y_value)
+thing2 = subs(thing1, y, vector(2))
+
+answer = int((thing2*mod1),t,limits1,limits2)
+%Be careful, answer might be negative of actual answer
