@@ -1,0 +1,29 @@
+%To find centre value of a circular point. Finds x and y and z coordinate of
+%centre of sphere
+%formula for x coordinate =  1/V = III x dxdydz
+%first we find the volume of region and limits
+syms x y z a b c O
+input1 = input('insert equation of bounded region (e.g. x==2)\n');
+inxterms = solve(input1,x);
+inyterms=solve(inxterms,y);
+inzterms=solve(inyterms,z);
+
+intVone=int(1,x,0,inxterms)
+intVtwo=int(intone,y,0,inyterms)
+volume1=int(inttwo,z,0,inzterms)
+
+intxone=int(x,x,0,inxterms);
+intxtwo=int(intone,y,0,inyterms);
+intxthree=int(inttwo,z,0,inzterms);
+xoordinate=intxthree/volume1
+
+intyone=int(z,x,0,inxterms);
+intytwo=int(intone,y,0,inyterms);
+intythree=int(inttwo,z,0,inzterms);
+yoordinate=intythree/volume1
+
+intzone=int(z,x,0,inxterms);
+intztwo=int(intone,y,0,inyterms);
+intzthree=int(inttwo,z,0,inzterms);
+zoordinate=intzthree/volume1
+
