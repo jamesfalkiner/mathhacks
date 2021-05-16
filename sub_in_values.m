@@ -1,0 +1,11 @@
+formula = input('input formula');
+first=input('input values to sub in for x y and z');
+second =  input('input values to takeaway');
+sub1 =  subs(formula, x, first(1));
+sub2 =  subs(sub1, y, first(2));
+sub3 =  subs(sub2, z, first(3));
+sub4=subs(formula, x, second(1));
+sub5 =  subs(sub4, y, second(2));
+sub6 =  subs(sub5, z, second(3));
+answer1=sub3
+answertakeaway = sub3-sub6

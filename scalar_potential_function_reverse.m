@@ -8,3 +8,6 @@ zint = int(input1(3),z)
 answer = xint+yint+zint
 %Apply some common sense to the result and you should be fine (divide by 3
 %usually)
+%Usually there are no scalars in the correct answer so if you get 3x +2y as
+%your result, the answer is usually x+y
+%REMEMBER TO ADD CONSTANT
