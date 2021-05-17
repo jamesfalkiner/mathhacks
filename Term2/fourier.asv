@@ -1,0 +1,45 @@
+%Need to find an, bn
+%fourier is ao/2 + sumtoinfinity(ancos(2*pi*n*t/period)+bnsin(2*pi*n*t/period))
+clear variables
+clear all
+syms t n infini
+func =  input("input function\n");
+limit2 = input('input top limit\n');
+limit1 = input('input bottom limit\n');
+period = input('input period\n');
+w1=(2*pi)/period
+a0divide2=int(func*cos(0*t*w1),t,limit1,limit2)/2;
+a0divide2 = 2*a0divide2/period
+a0 = a0divide2*2
+an=int(func*cos(n*t*w1),t,limit1,limit2);
+an = subs(an, cos(pi*n),(-1).^n);
+an = subs(an, sin(pi*n),0);
+an=subs(an, (2*sin((pi*n)/2)^2), 1-cos(pi*n));
+an = 2*an/period
+bn=int(func*sin(n*t*w1),t,limit1,limit2);
+bn = subs(bn, cos(pi*n),(-1).^n);
+bn = subs(bn, sin(pi*n),0);
+bn = 2*bn/period
+%remember that (2*sin((pi*n)/2)^2) =  1-(-1).^n
+%cos(pi*n) = ,(-1).^n
+%sin(pi*n)=0
+%Then remember that a0divide2+sumtoinfinity(ancos(nt+bnsin(nt))
+
+answer = a0divide2 + infini*an*cos(2*pi*n*t/period)+infini*bn*sin(2*pi*n*t/period)
+start_loop = input('input min\n') ;
+end_loop = input('input max (note cannot pass through 0)\n') ;
+range = start_loop:1:end_loop;
+toplot=[];
+while start_loop<=end_loop
+    value=sqrt(an.^2+bn.^2)/2;
+    value=subs(value,n,start_loop);
+    toplot = [toplot,value];
+    start_loop= start_loop +1;
+end
+
+stem(range,toplot)
+
+%better formula for an = int(func*cos*(n*t*w)
+%where w is 
+
+
