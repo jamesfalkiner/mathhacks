@@ -1,0 +1,25 @@
+%IGNORE
+
+clear variables 
+clear all
+syms t X(t) s x x(t) d1(t) Y y(t) y d2(t) X
+assume([t Y] > 0);
+d1 = diff(x,t);
+d2=diff(y,t);
+coeffd2= input('input y1 coefficient\n');
+coeffd1= input('input x1 coefficient\n');
+coeffd0= input('input non-diff coefficient\n');
+equals=input('what does the equation equal?\n');
+eqn1=coeffd2*d2+coeffd1*d1+coeffd0*x ==equals
+leqn1= laplace(eqn1,t,s);
+%inpuit initial conditions
+LT_Y=subs(leqn1,laplace(x,t,s),X);
+LT_Y=subs(LT_Y,laplace(y,t,s),Y);
+LT_Y=subs(LT_Y, x(0), input('x(0) equals what?\n'));                            %  y(0) = 1
+LT_Y=subs(LT_Y, y(0), input('y(0) equals what?\n'));
+ys=solve(LT_Y,Y);
+xs=solve(LT_Y,X);
+y = ilaplace(ys,s,t)
+x = ilaplace(xs,s,t)
+ezplot(x); shg
+ezplot(x); shg
