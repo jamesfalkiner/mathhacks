@@ -1,6 +1,0 @@
-clear variables
-clear all
-syms t n infini L a w
-funct = -(a*exp(-(pi*w*1i)/a)*(exp((pi*w*2i)/a) - 1))/(a^2 - w^2); %input function
-funct=subs(funct,a,2)
-fplot(norm(funct))

@@ -3,20 +3,23 @@
 clear variables
 clear all
 syms t n infini L a
+assume(n,{'positive','integer'})
 func =  input("input function\n");
 limit2 = input('input top limit\n');
 limit1 = input('input bottom limit\n');
-period = input('input period\n');
+period = input('input whole period (not half)\n');
 w1=(2*pi)/period
 a0 = int(2*func*cos(0*t*w1)/period,t,limit1,limit2)
-an=int(2*func*cos(n*t*w1)/period,t,limit1,limit2);
-an = subs(an, cos(pi*n),(-1).^n);
+an1=int(2*func*cos(n*t*w1)/period,t,limit1,limit2);
+an = subs(an1, cos(pi*n),(-1).^n);
 an = subs(an, sin(pi*n),0);
 an=subs(an, (2*sin((pi*n)/2).^2), 1-(-1).^n)
-bn=int(2*func*sin(n*t*w1)/period,t,limit1,limit2);
-bn = subs(bn, cos(pi*n),(-1).^n);
+ansimp=simplify(an1)
+bn1=int(2*func*sin(n*t*w1)/period,t,limit1,limit2);
+bn = subs(bn1, cos(pi*n),(-1).^n);
 bn = subs(bn, sin(pi*n),0);
 bn=subs(bn, (2*sin((pi*n)/2).^2), 1-(-1).^n)
+bnsimp=simplify(bn1)
 %remember that (2*sin((pi*n)/2)^2) =  1-(-1).^n
 %cos(pi*n) = ,(-1).^n
 %sin(pi*n)=0

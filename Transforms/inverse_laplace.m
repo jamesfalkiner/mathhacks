@@ -1,6 +1,6 @@
 clear variables
 clear all
-syms t n infini L a w T A s
+syms t n infini L a w T A s x
 func =  input("input function\n");
 answer = ilaplace(func,s,t)
 %maybe instead of sin(at) write (j/2)*(exp(-j*a*t)-exp(j*a*t))
