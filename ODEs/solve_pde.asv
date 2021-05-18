@@ -1,0 +1,5 @@
+%Non-linear PDE has dependant variables that are non-linear in derivatives
+clear all
+clear variables
+syms x
+u/t
