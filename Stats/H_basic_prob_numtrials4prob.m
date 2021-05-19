@@ -1,12 +1,10 @@
-% basic probability - chance of event given a certain number of trials
+% basic probability - how many events for a requested success rate
 
 chance = input('insert chance of event (0-1 range)');
-num_events = input('insert number of trials (0-1 range)');
-n = num_events;
-goal = input('insert number of positive trials');
-g = goal;
+goal_percentage = input('insert requested percentage chance of event');
+p = goal_percentage
 
-X = nchoosek(n,g)*(chance.^g)*(1-chance).^(n-g)
+X = nchoosek(n,g)(1-chance).^(n-g)
 
 %e.g.If 20% of bolts chosen at random from a production line are found to be defective, determine the
 % probabilities that out of four bolts chosen
