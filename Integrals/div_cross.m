@@ -1,0 +1,1 @@
+%div(u × v) = v · curlu − curl v · u for any vector fields u and v
