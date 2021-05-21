@@ -1,4 +1,4 @@
-answer = a0divide2 + infini*an*cos(2*pi*n*t/period)+infini*bn*sin(2*pi*n*t/period)
+%answer = a0divide2 + infini*an*cos(2*pi*n*t/period)+infini*bn*sin(2*pi*n*t/period)
 a0 =  input('input a0\n')
 an =  input('input an (BE CAREFUL)\n')
 bn =  input('input bn (BE CAREFUL)\n')
