@@ -9,13 +9,13 @@ y_value = subs(path,x,t)
 vector = [t y_value];
 limits2=point1(1);
 limits1=point2(1);
-pointsx = point2(1)-point1(1)
-pointsy = point2(2)-point1(2)
+pointsx = point2(1)-point1(1);
+pointsy = point2(2)-point1(2);
 
 
 mod1 = sqrt(sym((pointsx.^2+pointsy.^2)))
 
-input1 = input('Input r in cartesian in terms of x and y e.g.)\n');
+input1 = input('Input r in cartesian in terms of x and y e.g. x.^2+y.^2)\n');
 thing1 =  subs(input1, x, t)
 disp(y_value)
 thing2 = subs(thing1, y, vector(2))
