@@ -1,7 +1,7 @@
 %To find centre value of percentage of circle. Finds x and y coordinate of
 %centre of circle or percentage of circle.
 
-syms x y z a b O
+syms x y z a b O r
 base = r.^2;
 yvalue= sin(O);
 xvalue= cos(O);
