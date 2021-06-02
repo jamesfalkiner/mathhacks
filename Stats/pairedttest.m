@@ -4,7 +4,7 @@
 clear all
 clear variables
 DIFmean = input('input difference in mean\n');
-DIFsd = input('input difference in standard deviation\n');
+DIFsd = input('input difference in standard deviation (1/(n-1)(sum differences-diffenceinmean).^2\n');
 N = input('numb0e of trials\n');
 T=(DIFmean)/(DIFsd/(sqrt(N)))
 disp('Now compare to the N-1 degrees of freedom table')

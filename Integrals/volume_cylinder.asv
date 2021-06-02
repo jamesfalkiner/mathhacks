@@ -1,0 +1,5 @@
+clear all
+clear variables
+%Volume of cylinder is r dr dO
+syms x y z r O
+input 

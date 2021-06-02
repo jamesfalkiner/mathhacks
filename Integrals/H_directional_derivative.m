@@ -1,4 +1,4 @@
-syms x y z
+syms x y z a
 a = input('Input direction vector e.g. [i j k] or [2 1 3] \n');
 unit_vector = a/(sqrt(a(1).^2+a(2).^2+a(3).^2));
 

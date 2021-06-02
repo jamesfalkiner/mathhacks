@@ -1,0 +1,16 @@
+%dA=dxdy=d(x,y)/d(u,v) dudv
+clear all
+syms v u r
+rinput=input('input parameterised equation for cylinder (e.g.) [v*cos(O) v*sin(O) v]\n');
+drdv=diff(rinput,v)
+drdu=diff(rinput,O)
+scalefactor=jacobian(drdu,drdv)
+disp('SIMPLE ANSWER remember dvdO at the end or..\n')
+disp('solution)
+modulus= simplify(sqrt(scalefactor(1).^2+scalefactor(2).^2+scalefactor(3).^2));
+limitangtop=input('what is top limit of angles\n');
+limitangbot=input('what is bottom limit of angles\n');
+limittopr=input('what is top limit of r (usually z) e.g. 2\n');
+limitbotr=input('what is bottom limit of r (usually z) e.g. 2\n');
+toint=modules*r
+angleinted=int(toint,O,limitangbot,limit

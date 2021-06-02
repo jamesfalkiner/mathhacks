@@ -1,0 +1,9 @@
+%dA for cyclinder is rdOdr
+clear all
+clear variables
+syms x y z r O
+divd=input('input vector field equation[x y z]\n')
+plane=input('input equation of plane
+intangles=int(divd*r,O,0,pi*2);
+zlimit=input('input maximum radius\n')
+intr=int(intangles,r,0,zlimit)

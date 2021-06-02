@@ -2,7 +2,7 @@
 %Independant variables are the bottom of the differential
 %Dependant variables are on the top
 
-%Linear - dependant variables and derivatives appear only linearly
+%Linear - dependant variables and derivatives (you can have d2x/dtx but not dx/dt.^2 appear only linearly
 %Homogenous is when all terms contain dependant variables
 
 %Semilinear is when it's linear 
@@ -12,7 +12,7 @@
 %Non-linear PDE has dependant variables that are non-linear in derivatives
 clear all
 clear variables
-syms x
+syms x y
 
 a=input('input coefficent of uxx\n');
 b=input('input coefficent of uxy\n');

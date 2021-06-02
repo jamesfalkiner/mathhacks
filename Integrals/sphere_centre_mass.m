@@ -13,10 +13,10 @@ limit3 = input('insert 2nd start angle (in radians)\n');
 limit4 = input('insert 2nd final angle (in radians)\n');
 radiusO=input('insert outer radius (sqrt(a.^2))\n');
 radiusI=input('insert inner radius(usually 0)\n');
-intVradius=int(r.^2,r,radiusI,radiusO);
-intVone=int(sin(O),O,limit1,limit2);
-intVtwo=int(1,p, limit3,limit4);
-volume=intVradius*intVone*intVtwo
+intVradius=int(r.^2*sin(p),r,radiusI,radiusO);
+intVone=int(intVradius,O,limit1,limit2);
+intVtwo=int(intVone,p, limit3,limit4);
+volume=intVtwo
 
 %xcoord
 intXradius=int(r.^3,r,radiusI,radiusO);

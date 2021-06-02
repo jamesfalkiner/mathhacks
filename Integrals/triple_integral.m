@@ -1,4 +1,4 @@
-syms x y z a b
+syms x y z a b O p o
 input1 = input('insert cartesian to integrated thrice\n');
 limit1 =input('insert limit 1 (inner limit top)\n');
 limit2 =input('insert limit 2(inner limit bottom)\n');
