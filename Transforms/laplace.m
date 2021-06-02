@@ -1,8 +1,9 @@
 clear variables
 clear all
 syms t n infini L a w T A s x
-func =  input("input function\n");
+func =  input("input function CHECK ASSUMPTIONS FIRST\n");
 assume(t>=1)
+assume (func,
 answer = simplify(laplace(func,t,s))
 %maybe instead of sin(at) write (j/2)*(exp(-j*a*t)-exp(j*a*t))
 %or cos = (1/2)*(exp(-j*a*t)+exp(j*a*t))

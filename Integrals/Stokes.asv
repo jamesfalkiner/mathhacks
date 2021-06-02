@@ -1,0 +1,12 @@
+clear
+syms x y z t;
+F = [y.^2*cos(z),2*x*y*cos(z),-x*y.^2*sin(z)];
+A = vectorPotential(F, [x y z]);
+r = [cos(t) sin(t) 0];
+int(dot(subs(A, [x y z], r),diff(r,t)),t,0,2*pi)
+clear
+syms x y z t p;
+F = [x*y,x*z,-z*y];
+r = [sin(p)*cos(t) sin(p)*sin(t) cos(p)];
+nds = simplify(cross(diff(r,t),diff(r,p)));
+int(int(dot(subs(F, [x y z], r),nds),p,0,pi/2),t,0,2*pi)

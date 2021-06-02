@@ -5,7 +5,7 @@ xint = int(input1(1),x)
 yint = int(input1(2),y)
 zint = int(input1(3),z)
 
-answer = xint+yint+zint
+answer = simplify(xint+yint+zint)
 %Apply some common sense to the result and you should be fine (divide by 3
 %usually)
 %Usually there are no scalars in the correct answer so if you get 3x +2y as
