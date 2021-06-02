@@ -14,7 +14,7 @@ intone =  simplify(int(input1, firstintegral, limit1, limit2))
 inttwo = simplify(int(intone, secondintegral, limit3, limit4))
 intthree = simplify(int(inttwo, thirdintegral, limit5, limit6))
 
-
+%May be negative, manually check with second integral
 %note to find second moment of area you need to evaluate int(y.^2)dxdy first sketch, then you do the
 %limits as the curves in terms of y and integrate with x then you do the y
 %limits and integrate with with y then do it all again but with int(x.^2)dxdy
