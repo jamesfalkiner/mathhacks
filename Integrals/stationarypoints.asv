@@ -1,0 +1,5 @@
+clear
+syms x y z
+input1=input('input field\n')
+gradded=gradient(input1, [x y z])==0
+answe

@@ -5,7 +5,7 @@ syms x y z
 input6 = input('Input function to find gradient of\n');
 if length(gradient(input6)) == 2    
     %Finds and solves hessian matrix
-    Hessian_matrix = hessian(input6);
+    Hessian_matrix = hessian(input6, [x,y,z]);
     lambda = eig(Hessian_matrix) 
     
     % BOTH EIG +VE = MIN
